@@ -6,7 +6,6 @@ import { Button } from 'antd'
 function App() {
   return (
     <BrowserRouter>
-      <Button type='primary'>Primary Button</Button>
       <div className="App">
         <Routes>
           {/* 创建路由path路径和组件对应关系 */}
