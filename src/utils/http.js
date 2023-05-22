@@ -4,6 +4,7 @@
 import axios from 'axios'
 import { getToken } from './token'
 import { history } from './history'
+
 const http = axios.create({
   baseURL: 'http://geek.itheima.net/v1_0',
   timeout: 5000
@@ -33,7 +34,8 @@ http.interceptors.response.use((response)=> {
       // 跳回登录 reactRouter默认状态下 并不支持在组件之外完成路由跳转
       // 需要自己实现
       console.log('login')
-      history.pushState('/login')
+      
+      history.push('/login')
     }
     return Promise.reject(error)
 })
